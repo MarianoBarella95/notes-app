@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => EditNote(noteToEdit: nota)));
                       },
-                      leading: Icon(Icons.note_alt),
+                      leading: Image(image: AssetImage("assets/icons8-note-48.png")),
                       title: Text(noteProvider.notes[index].title.toString()),
                       subtitle: Text(
                         noteProvider.notes[index].content.toString(),
@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
                       trailing: IconButton(onPressed: () {
                         noteProvider.deleteNote(nota.id);
                       }, icon: Icon(Icons.delete), color: Colors.redAccent),
-                      tileColor: Colors.amberAccent,
+                      //tileColor: Colors.grey,
                     );
                   },
                 );
